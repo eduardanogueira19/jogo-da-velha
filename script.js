@@ -27,27 +27,27 @@ function handleClick(event) {
     board[index] = currentPlayer;
 
     if (checkWin(currentPlayer)) {
-        statusDiv.textContent = '${currentPlayer} venceu!';
+        statusDiv.textContent = `${currentPlayer} venceu!`;
         return;
     }
 
     if (board.every(cell => cell)) {
-        statusDiv.textContent = 'Empate!';
+        statusDiv.textContent = `Empate!`;
         return;
     }
 
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-    statusDiv.textContent = 'É a vez do ${currentPlayer}';
+    statusDiv.textContent = `É a vez do ${currentPlayer}`;
 }
 
 function resetGame() {
     board.fill(null);
     cells.forEach(cell => cell.textContent = '');
     currentPlayer = 'X';
-    statusDiv.textContent = 'É a vez do ${currentPlayer}';
+    statusDiv.textContent = `É a vez do ${currentPlayer}`;
 }
 
 cells.forEach(cell => cell.addEventListener('click', handleClick));
 resetButton.addEventListener('click', resetGame);
 
-statusDiv.textContent = 'É a vez do ${currentPlayer}';
+statusDiv.textContent = `É a vez do ${currentPlayer}`;

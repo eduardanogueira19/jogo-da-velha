@@ -3,32 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da velha</title>
-    <link rel="stylesheet" href="style.css">
-
+    <title>Escolha do nível</title>
+    <style>
+        body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #015b4feb;
+        color: white;
+        }
+        h1{
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .opcoes{
+            background-color: rgba(255, 255, 255, 0.852);
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+            margin: 10px 0;
+            border-radius: 15px;
+            color: #015b4f;
+            width: 50%;
+        }
+    </style>
 </head>
 <body>
-   
-    <div class="game-container">
-         <h1>JOGO DA VELHA</h1>
-         <div id="scoreboard">
-            <p>X: <span id="scoreX">0</span></p>
-            <p>O: <span id="scoreO">0</span></p>
-        </div>
-         <div class="board">
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-            <div class="cell" data-cell></div>
-        </div>
-        <button id="resetButton">Reiniciar Jogo</button>
-        <div id="status"></div>
-    </div>
-    <script src="script.js"></script>
+    <h1>Escolha o nível que deseja jogar:</h1>
+    <a class="opcoes" href="jogo3_3.html">Nível 01(3x3)</a>
+    <a class="opcoes" href="jogo4_4.html">Nível 02(4x4)</a>
 </body>
 </html>

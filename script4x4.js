@@ -6,13 +6,13 @@ const scoreX = document.getElementById('scoreX');
 const scoreO = document.getElementById('scoreO');
 
 let currentPlayer = 'X';
-let board = Array(9).fill(null);
+let board = Array(15).fill(null);
 let scores = { X: 0, O: 0 };
 
 const winPatterns = [
-    [0, 1, 2], [3, 4, 5], [6, 7, 8], // Linhas
-    [0, 3, 6], [1, 4, 7], [2, 5, 8], // Colunas
-    [0, 4, 8], [2, 4, 6]              // Diagonais
+    [0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11], [12, 13, 14, 15], // Linhas
+    [0, 4, 8, 12], [1, 5, 9, 13], [2, 6, 10, 14], [3, 7, 11, 15], // Colunas
+    [0, 5, 10, 15], [3, 6, 9, 12]              // Diagonais
 ];
 
 function checkWin(player) {
